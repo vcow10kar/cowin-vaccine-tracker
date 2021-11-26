@@ -1,0 +1,30 @@
+.searchPage {
+    width: 80%;
+    margin: auto;
+}
+
+.alert {
+    width: 100%;
+    margin: auto;
+}
+
+.search {
+    padding-top: 100px;
+    gap: 10px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.searchResults {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+

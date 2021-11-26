@@ -1,0 +1,24 @@
+.footerPage {
+    width: 100%;
+    margin: auto;
+    background-color: #002171;
+    color: white;
+    position: fixed;
+    bottom: 0px;
+    z-index: 3;
+}
+
+.footer {
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+
+.footer a {
+    text-decoration: none;
+    color: white;
+}
