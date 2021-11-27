@@ -10,7 +10,7 @@ const theme = createTheme({
             main: primaryColor,
         },
         secondary: {
-            main: secondaryColor,
+            main: primaryColor,
         },
     },
     shape: {

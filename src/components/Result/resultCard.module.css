@@ -1,5 +1,5 @@
 .resultCard {
-    max-width: 300px;
+    max-width: 320px;
     margin: auto;
     border: 1px solid #66BB6A;
     padding: 8px;
@@ -13,8 +13,10 @@
 
 .resultButtons {
     display: flex;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
     padding: 5px;
+    margin: 5px;
+    justify-content: space-between;
 }
 
 .resultButtons a {

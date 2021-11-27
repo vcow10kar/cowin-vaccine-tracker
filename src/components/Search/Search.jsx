@@ -15,18 +15,20 @@ function Search() {
 
         let pincode = String(data.get("pincode"));
         let date = String(data.get("date"));
+        date =  date.split("-").reverse().join("-");
 
-        console.log(pincode, date.split("-").reverse().join("-"));
+        console.log(pincode, date);
 
         axios({
             url: `https://cdn-api.co-vin.in/api/v2/appointment/sessions/public/findByPin?pincode=${pincode}&date=${date}`,
             method: 'get',
             // headers: {
-            //     "Accept-Language": "en_IN"
+            //     "accept-language": "en_IN",
             // }
         })
             .then((res) => {
                 console.log(res.data);
+                setResults(res.data.sessions);
             })
             .catch(err => {
                 console.log("Error:", err);
@@ -51,7 +53,7 @@ function Search() {
 
                 <div className={styles.searchResults}>
                     {results.map(item => {
-                        return <ResultCard data={item} />
+                        return <ResultCard data={item} key = {item.center_id} />
                     })}
                 </div>
 

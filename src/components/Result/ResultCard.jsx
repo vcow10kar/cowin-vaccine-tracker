@@ -1,17 +1,31 @@
 import { Button } from "@mui/material";
-import styles from './recipeCard.module.css';
+import styles from './resultCard.module.css';
 
-function ResultCard({data}) {
+function ResultCard({ data }) {
     return (
-        <div className = {styles.resultCard} key = {data.idMeal}>
-            <h3>{data.strMeal}</h3>
-            <img src = {data.strMealThumb} alt = {data.strMeal}/>
-            <h4>{data.strArea}, {data.strCategory}</h4>
-            <div className = {styles.resultButtons}>
-                <a href = {data.strYoutube} target="_blank" rel="noreferrer"><Button size = "medium" disableElevation type = "submit" variant = "contained">YouTube</Button></a>
-                <a href = {data.strSource} target="_blank" rel="noreferrer"><Button size = "medium" disableElevation type = "submit" variant = "contained">Source</Button></a>
+        <div className={styles.resultCard} key={data.idMeal}>
+            <h3>{data.name}</h3>
+            <h4>Vaccine: {data.vaccine}</h4>
+            <h4>Cateogry: {data.category}</h4>
+            <h4>D1: {data.available_capacity_dose1}</h4>
+            <h4>D2: {data.available_capacity_dose2}</h4>
+            <h4>Pincode: {data.category}</h4>
 
-            </div>
+            {data.slots.length > 0 
+            
+                ? 
+                    <div className={styles.resultButtons}>
+                        {data.slots.map(item => {
+                        return <Button size="medium" disableElevation type="submit" variant="contained">{item}</Button>
+
+                        })}
+                    </div>
+               
+                : 
+                
+                null
+            }
+
         </div>
     )
 }
