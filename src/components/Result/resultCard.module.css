@@ -1,7 +1,7 @@
 .resultCard {
     max-width: 320px;
     margin: auto;
-    border: 1px solid #66BB6A;
+    border: 1px solid #0d47a1;
     padding: 8px;
     margin: 5px auto;
 }
@@ -16,6 +16,7 @@
     flex-wrap: wrap;
     padding: 5px;
     margin: 5px;
+    gap: 5px;
     justify-content: space-between;
 }
 

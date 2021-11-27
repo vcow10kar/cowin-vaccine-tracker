@@ -27,8 +27,8 @@ const theme = createTheme({
             color: "white",
             fontWeight: 700,
           },
-          sizeMedium: {
-              fontSize: '1.5vh'
+          sizeSmall: {
+              fontSize: '1.4vh'
           }
         },
       },
@@ -38,6 +38,7 @@ const theme = createTheme({
         styleOverrides: {
             root: {
                 minWidth: '200px',
+                fontSize: '1.2vh',
                 '&:hover': {
                     border: secondaryColor
                 }
