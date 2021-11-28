@@ -39,8 +39,8 @@ function Search() {
         <div className={styles.searchPage}>
             <form onSubmit={handleSubmit}>
                 <div className={styles.search} >
-                    <TextField name="pincode" placeholder="Enter Pin Code..." />
-                    <TextField name="date" type = "date" placeholder="Enter Date..." />
+                    <TextField required name="pincode" placeholder="Enter Pin Code..." />
+                    <TextField required name="date" type = "date" placeholder="Enter Date..." />
                     <Button disableElevation type="submit" variant="contained">Search</Button>
                 </div>
 
